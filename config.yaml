@@ -1,0 +1,27 @@
+app:
+  name: "reddit"
+  mode: "dev"
+  port: 8088
+
+log :
+  level: "debug"
+  filename: "reddit.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: "localhost"
+  port: 13306
+  user: root
+  password: root
+  dbname: "reddit"
+  max_open_conns: 200
+  max_idle_conns: 50
+
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+  password: ""
+  pool_size: 100
