@@ -25,7 +25,7 @@ func main() {
 		fmt.Printf("init settings failed, err:%v\n", err)
 	}
 	// 2. 初始化日志
-	if err := logger.Init(); err != nil {
+	if err := logger.Init(viper.GetString("app.mode")); err != nil {
 		fmt.Printf("init logger failed, err:%v\n", err)
 	}
 	// 3. 初始化Mysql
@@ -36,11 +36,16 @@ func main() {
 	if err := redis.Init(); err != nil {
 		fmt.Printf("init redis failed, err:%v\n", err)
 	}
+	// 初始化gin框架内置的校验器使用的翻译器
+	//if err := controller.InitTrans("zh"); err != nil {
+	//	fmt.Printf("init trans failed, err:%v\n", err)
+	//	return
+	//}
 	//5. 注册路由
-	r := routers.SetUp()
+	r := routers.SetUp(viper.GetString("app.mode"))
 	//6. 启动服务 优雅关机
 	srv := &http.Server{
-		Addr:    fmt.Sprintf(":%d", viper.GetString("app.port")),
+		Addr:    fmt.Sprintf(":%s", viper.GetString("app.port")),
 		Handler: r,
 	}
 	go func() {

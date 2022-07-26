@@ -1,7 +1,7 @@
 app:
   name: "reddit"
   mode: "dev"
-  port: 8088
+  port: "8088"
 
 log :
   level: "debug"

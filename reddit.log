@@ -1,0 +1,101 @@
+{"level":"ERROR","time":"2022-07-26T09:46:14.609+0800","caller":"logger/logger.go:112","msg":"[Recovery from panic]","error":"runtime error: invalid memory address or nil pointer dereference","request":"POST /signup HTTP/1.1\r\nHost: localhost:8088\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 83\r\nContent-Type: application/json\r\nPostman-Token: 579b375c-2ba7-45b1-9447-71d6579b7fd8\r\nUser-Agent: PostmanRuntime/7.28.2\r\n\r\n","stack":"goroutine 82 [running]:\nruntime/debug.Stack()\n\tD:/environment/go/src/runtime/debug/stack.go:24 +0x65\ngo_reddit/logger.GinRecovery.func1.1()\n\tD:/go_reddit/logger/logger.go:115 +0x2cc\npanic({0xb58d60, 0xf35e40})\n\tD:/environment/go/src/runtime/panic.go:838 +0x207\ngithub.com/bwmarrin/snowflake.(*Node).Generate(0x0)\n\tD:/goproject/pkg/mod/github.com/bwmarrin/snowflake@v0.3.0/snowflake.go:137 +0x27\ngo_reddit/pkg/snowflake.GenID(...)\n\tD:/go_reddit/pkg/snowflake/snowflake.go:22\ngo_reddit/service.SignUp(...)\n\tD:/go_reddit/service/user.go:12\ngo_reddit/controller.SignUpController(0xc00013c100)\n\tD:/go_reddit/controller/user.go:27 +0x2e7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngo_reddit/logger.GinRecovery.func1(0xc00013c100)\n\tD:/go_reddit/logger/logger.go:126 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngo_reddit/logger.GinLogger.func1(0xc00013c100)\n\tD:/go_reddit/logger/logger.go:67 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00059c680, 0xc00013c100)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/gin.go:616 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00059c680, {0xca0318?, 0xc00013e0e0}, 0xc000414300)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/gin.go:572 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xc9f6f8?}, {0xca0318, 0xc00013e0e0}, 0xc000414300)\n\tD:/environment/go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc0001d4000, {0xca0938, 0xc0003ec3f0})\n\tD:/environment/go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tD:/environment/go/src/net/http/server.go:3071 +0x4db\n"}
+{"level":"INFO","time":"2022-07-26T09:46:14.661+0800","caller":"logger/logger.go:70","msg":"/signup","status":500,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.2","errors":"","cost":0.0524233}
+{"level":"ERROR","time":"2022-07-26T09:46:29.742+0800","caller":"logger/logger.go:112","msg":"[Recovery from panic]","error":"runtime error: invalid memory address or nil pointer dereference","request":"POST /signup HTTP/1.1\r\nHost: localhost:8088\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 83\r\nContent-Type: application/json\r\nPostman-Token: 29088fd9-aa2b-4094-aaa8-22b0579b6dc3\r\nUser-Agent: PostmanRuntime/7.28.2\r\n\r\n","stack":"goroutine 82 [running]:\nruntime/debug.Stack()\n\tD:/environment/go/src/runtime/debug/stack.go:24 +0x65\ngo_reddit/logger.GinRecovery.func1.1()\n\tD:/go_reddit/logger/logger.go:115 +0x2cc\npanic({0xb58d60, 0xf35e40})\n\tD:/environment/go/src/runtime/panic.go:838 +0x207\ngithub.com/bwmarrin/snowflake.(*Node).Generate(0x0)\n\tD:/goproject/pkg/mod/github.com/bwmarrin/snowflake@v0.3.0/snowflake.go:137 +0x27\ngo_reddit/pkg/snowflake.GenID(...)\n\tD:/go_reddit/pkg/snowflake/snowflake.go:22\ngo_reddit/service.SignUp(...)\n\tD:/go_reddit/service/user.go:12\ngo_reddit/controller.SignUpController(0xc00013c400)\n\tD:/go_reddit/controller/user.go:27 +0x2e7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngo_reddit/logger.GinRecovery.func1(0xc00013c400)\n\tD:/go_reddit/logger/logger.go:126 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngo_reddit/logger.GinLogger.func1(0xc00013c400)\n\tD:/go_reddit/logger/logger.go:67 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00059c680, 0xc00013c400)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/gin.go:616 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00059c680, {0xca0318?, 0xc00013e1c0}, 0xc00013c300)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/gin.go:572 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xc9f6f8?}, {0xca0318, 0xc00013e1c0}, 0xc00013c300)\n\tD:/environment/go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc0001d4000, {0xca0938, 0xc0003ec3f0})\n\tD:/environment/go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tD:/environment/go/src/net/http/server.go:3071 +0x4db\n"}
+{"level":"INFO","time":"2022-07-26T09:46:29.742+0800","caller":"logger/logger.go:70","msg":"/signup","status":500,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.2","errors":"","cost":0.0003504}
+{"level":"INFO","time":"2022-07-26T09:52:02.620+0800","caller":"go_reddit/main.go:61","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T09:52:02.631+0800","caller":"go_reddit/main.go:70","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T09:52:16.022+0800","caller":"logger/logger.go:112","msg":"[Recovery from panic]","error":"runtime error: invalid memory address or nil pointer dereference","request":"POST /signup HTTP/1.1\r\nHost: localhost:8088\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 83\r\nContent-Type: application/json\r\nPostman-Token: f7d3ec36-dccb-4e92-8561-31ede0c80f91\r\nUser-Agent: PostmanRuntime/7.28.2\r\n\r\n","stack":"goroutine 31 [running]:\nruntime/debug.Stack()\n\tD:/environment/go/src/runtime/debug/stack.go:24 +0x65\ngo_reddit/logger.GinRecovery.func1.1()\n\tD:/go_reddit/logger/logger.go:115 +0x2cc\npanic({0x13d8d60, 0x17b5e40})\n\tD:/environment/go/src/runtime/panic.go:838 +0x207\ngithub.com/bwmarrin/snowflake.(*Node).Generate(0x0)\n\tD:/goproject/pkg/mod/github.com/bwmarrin/snowflake@v0.3.0/snowflake.go:137 +0x27\ngo_reddit/pkg/snowflake.GenID(...)\n\tD:/go_reddit/pkg/snowflake/snowflake.go:22\ngo_reddit/service.SignUp(...)\n\tD:/go_reddit/service/user.go:12\ngo_reddit/controller.SignUpController(0xc0000f8100)\n\tD:/go_reddit/controller/user.go:36 +0x213\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngo_reddit/logger.GinRecovery.func1(0xc0000f8100)\n\tD:/go_reddit/logger/logger.go:126 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngo_reddit/logger.GinLogger.func1(0xc0000f8100)\n\tD:/go_reddit/logger/logger.go:67 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/context.go:173\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00042a4e0, 0xc0000f8100)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/gin.go:616 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00042a4e0, {0x1520318?, 0xc0004400e0}, 0xc0004c6200)\n\tD:/goproject/pkg/mod/github.com/gin-gonic/gin@v1.8.1/gin.go:572 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x151f6f8?}, {0x1520318, 0xc0004400e0}, 0xc0004c6200)\n\tD:/environment/go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc00008c000, {0x1520938, 0xc00002c510})\n\tD:/environment/go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tD:/environment/go/src/net/http/server.go:3071 +0x4db\n"}
+{"level":"INFO","time":"2022-07-26T09:52:16.068+0800","caller":"logger/logger.go:70","msg":"/signup","status":500,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.2","errors":"","cost":0.046496}
+{"level":"INFO","time":"2022-07-26T09:52:43.948+0800","caller":"logger/logger.go:70","msg":"/signup","status":404,"method":"GET","path":"/signup","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-26T09:52:44.039+0800","caller":"logger/logger.go:70","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-26T09:52:47.256+0800","caller":"logger/logger.go:70","msg":"/signup","status":404,"method":"GET","path":"/signup","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-26T09:56:32.699+0800","caller":"go_reddit/main.go:61","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T09:56:32.708+0800","caller":"go_reddit/main.go:70","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T09:59:27.716+0800","caller":"go_reddit/main.go:61","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T09:59:27.774+0800","caller":"go_reddit/main.go:70","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T10:01:05.665+0800","caller":"go_reddit/main.go:61","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T10:01:05.675+0800","caller":"go_reddit/main.go:70","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T10:01:41.655+0800","caller":"controller/user.go:27","msg":"Sign Up with invalid param"}
+{"level":"INFO","time":"2022-07-26T10:27:18.534+0800","caller":"go_reddit/main.go:61","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T10:27:18.546+0800","caller":"go_reddit/main.go:70","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T10:35:14.666+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T10:35:14.680+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T10:36:07.313+0800","caller":"controller/user.go:20","msg":"Sign Up with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2022-07-26T11:08:16.084+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T11:08:16.092+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T11:11:06.320+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T11:11:06.324+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T14:20:32.686+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T14:20:32.710+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T14:20:59.993+0800","caller":"controller/user.go:20","msg":"Sign Up with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2022-07-26T14:43:30.229+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T14:43:30.236+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T14:47:14.068+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T14:47:14.071+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T14:47:25.734+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T14:47:25.899+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T14:49:24.371+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T14:49:24.381+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T14:51:38.585+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T14:51:38.589+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T14:53:04.783+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T14:53:04.800+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T18:19:47.975+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T18:19:47.988+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T18:24:46.064+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T18:24:46.080+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T18:28:01.816+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T18:28:01.826+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T19:06:11.490+0800","caller":"controller/user.go:22","msg":"Sign Up with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2022-07-26T21:44:45.589+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T21:44:45.590+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:21:27.394+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test"}
+{"level":"ERROR","time":"2022-07-26T22:21:47.443+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test02"}
+{"level":"INFO","time":"2022-07-26T22:24:36.146+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:24:36.152+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:24:55.942+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test02"}
+{"level":"INFO","time":"2022-07-26T22:28:47.516+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:28:47.531+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:29:19.639+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test02"}
+{"level":"INFO","time":"2022-07-26T22:31:41.245+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:31:41.252+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:31:59.616+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test02"}
+{"level":"ERROR","time":"2022-07-26T22:32:47.319+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:33:38.999+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:33:39.002+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:33:54.208+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:35:21.509+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:35:21.520+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:35:39.897+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:36:37.591+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:36:37.607+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:36:59.346+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:37:56.770+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:37:56.778+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:38:11.091+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:43:25.893+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:43:25.909+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:43:59.053+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:44:39.803+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:44:39.804+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T22:46:22.579+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:46:22.591+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:46:38.923+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:48:08.384+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:48:08.395+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:48:28.719+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:51:46.310+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:51:46.314+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:51:59.408+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:54:33.428+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:54:33.443+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-26T22:56:05.108+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:56:05.117+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:56:23.030+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T22:58:35.202+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T22:58:35.213+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-26T22:58:53.963+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"ERROR","time":"2022-07-26T22:59:02.566+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"ERROR","time":"2022-07-26T22:59:03.363+0800","caller":"controller/user.go:86","msg":"service.Login failed","username":"test03"}
+{"level":"INFO","time":"2022-07-26T23:03:58.165+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-26T23:03:58.169+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
