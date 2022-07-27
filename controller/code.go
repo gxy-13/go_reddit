@@ -9,6 +9,9 @@ const (
 	CodeUserNotExist
 	CodeWrongPassword
 	CodeServerBusy
+
+	CodeInvalidToken
+	CodeNeedLogin
 )
 
 var codeMsgMap = map[ResCode]string{
@@ -18,6 +21,9 @@ var codeMsgMap = map[ResCode]string{
 	CodeUserNotExist:  "user not exist",
 	CodeWrongPassword: "wrong password",
 	CodeServerBusy:    "server busy",
+
+	CodeInvalidToken: "Invalid Token",
+	CodeNeedLogin:    "please login",
 }
 
 func (c ResCode) Msg() string {

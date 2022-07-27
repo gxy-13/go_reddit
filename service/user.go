@@ -32,7 +32,7 @@ func SignUp(p *models.ParamSignUp) (err error) {
 }
 
 // SignIn 用户登录业务层
-func SignIn(u *models.Login) (token string, err error) {
+func SignIn(u *models.Login) (aToken, rToken string, err error) {
 	user := &models.User{
 		Username: u.Username,
 		Password: u.Password,
@@ -41,8 +41,8 @@ func SignIn(u *models.Login) (token string, err error) {
 	fmt.Println(user)
 	// 判断账号密码是否正确
 	if err = mysql.CheckLogin(user); err != nil {
-		return "", err
+		return "", "", err
 	}
 	// 登录成功设置token 因为传递的是user指针，所以获取userid
-	return jwt.GenToken(user.UserID, user.Username)
+	return jwt.GenToken(user.UserID)
 }

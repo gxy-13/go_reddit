@@ -5,7 +5,10 @@ import (
 	"fmt"
 	"go_reddit/dao/mysql"
 	"go_reddit/models"
+	"go_reddit/pkg/jwt"
 	"go_reddit/service"
+	"net/http"
+	"strings"
 
 	"go.uber.org/zap"
 
@@ -59,10 +62,7 @@ func SignUpController(c *gin.Context) {
 		ResponseError(c, CodeServerBusy)
 		return
 	}
-	// 3. 返回响应
-	//c.JSON(http.StatusOK, gin.H{
-	//	"message": "success",
-	//})
+
 	ResponseSuccess(c, CodeSuccess)
 }
 
@@ -70,7 +70,7 @@ func SignUpController(c *gin.Context) {
 func SignInController(c *gin.Context) {
 	// 从请求中获取参数
 	// 创建用户实例
-	var user models.Login
+	var user models.User
 	if err := c.ShouldBindJSON(&user); err != nil {
 		zap.L().Error("Sign in with invalid param", zap.Error(err))
 		//c.JSON(http.StatusOK, gin.H{
@@ -79,17 +79,41 @@ func SignInController(c *gin.Context) {
 		ResponseError(c, CodeInvalidParam)
 		return
 	}
-	fmt.Println(user)
-	// 交给service层
-	token, err := service.SignIn(&user)
-	if err != nil {
-		zap.L().Error("service.Login failed", zap.String("username", user.Username))
-		if errors.Is(err, mysql.ErrorUserNotExist) {
-			ResponseError(c, CodeUserNotExist)
-			return
-		}
+	if err := mysql.CheckLogin(&user); err != nil {
+		zap.L().Error("mysql.Login(&u) failed", zap.Error(err))
 		ResponseError(c, CodeWrongPassword)
+	}
+	// 生成Token
+	aToken, rToken, _ := jwt.GenToken(user.UserID)
+	ResponseSuccess(c, gin.H{
+		"accessToken":  aToken,
+		"refreshToken": rToken,
+		"userID":       user.UserID,
+		"username":     user.Username,
+	})
+}
+func RefreshTokenController(c *gin.Context) {
+	rt := c.Query("refresh_token")
+	// 客户端携带Token有三种方式 1.放在请求头 2.放在请求体 3.放在URI
+	// 这里假设Token放在Header的Authorization中，并使用Bearer开头
+	// 这里的具体实现方式要依据你的实际业务情况决定
+	authHeader := c.Request.Header.Get("Authorization")
+	if authHeader == "" {
+		ResponseErrorWithMsg(c, CodeInvalidToken, "请求头缺少Auth Token")
+		c.Abort()
 		return
 	}
-	ResponseSuccess(c, token)
+	// 按空格分割
+	parts := strings.SplitN(authHeader, " ", 2)
+	if !(len(parts) == 2 && parts[0] == "Bearer") {
+		ResponseErrorWithMsg(c, CodeInvalidToken, "Token格式不对")
+		c.Abort()
+		return
+	}
+	aToken, rToken, err := jwt.RefreshToken(parts[1], rt)
+	fmt.Println(err)
+	c.JSON(http.StatusOK, gin.H{
+		"access_token":  aToken,
+		"refresh_token": rToken,
+	})
 }
