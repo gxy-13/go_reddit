@@ -2,6 +2,7 @@ package mysql
 
 import (
 	"database/sql"
+	"fmt"
 	"go_reddit/models"
 
 	"go.uber.org/zap"
@@ -18,13 +19,15 @@ func CreatePost(p *models.Post) (err error) {
 }
 
 func GetPostList() (posts []*models.ApiPostDetail, err error) {
-	sqlStr := "select post_id, title, content, author_id, community_id, create_time from post limit 2"
+	sqlStr := "select post_id, title, content, author_id, community_id, create_time from post order by create_time "
 	posts = make([]*models.ApiPostDetail, 0, 2)
 	err = db.Select(&posts, sqlStr)
 	return
 }
 
-func GetPostByID(postID string) (post *models.ApiPostDetail, err error) {
+func GetPostByID(postID uint64) (post *models.Post, err error) {
+	fmt.Printf("get post by id: %d\n", postID)
+	post = new(models.Post)
 	sqlStr := "select post_id, title, content, author_id, community_id, create_time from post where post_id = ?"
 	err = db.Get(post, sqlStr, postID)
 	if err == sql.ErrNoRows {

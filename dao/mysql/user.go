@@ -72,6 +72,7 @@ func CheckLogin(u *models.User) (err error) {
 }
 
 func GetUserByID(userID string) (u *models.User, err error) {
+	u = new(models.User)
 	sqlStr := "select user_id, username from user where user_id = ?"
 	err = db.Get(u, sqlStr, userID)
 	return

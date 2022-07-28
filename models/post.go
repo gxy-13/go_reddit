@@ -7,7 +7,7 @@ import (
 )
 
 type Post struct {
-	PostID      uint64    `json:"post_id" db:"post_id"`
+	PostID      uint64    `json:"post_id,string" db:"post_id"`
 	Title       string    `json:"title" db:"title"`
 	Content     string    `json:"content" db:"content"`
 	AuthorID    uint64    `json:"author_id" db:"author_id"`
@@ -40,7 +40,8 @@ func (p *Post) UnmarshalJSON(data []byte) (err error) {
 }
 
 type ApiPostDetail struct {
-	*Post
-	AuthorName    string `json:"author_name"`
-	CommunityName string `json:"community_name"`
+	*Post                              // 嵌入帖子结构体
+	AuthorName       string            `json:"author_name"` // 作者
+	*CommunityDetail `json:"community` // 嵌入社区信息
+	VoteNum          int64             `json:"vote_num"` // 投票数
 }

@@ -137,3 +137,90 @@
 {"level":"INFO","time":"2022-07-27T22:20:25.630+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
 {"level":"INFO","time":"2022-07-27T22:21:19.209+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-27T22:21:19.224+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T14:37:04.431+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T14:37:04.460+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T14:38:53.276+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T14:38:53.285+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T14:48:58.604+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T14:48:58.622+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T14:51:19.895+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T14:51:19.911+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T14:53:45.467+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T14:53:45.478+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T15:04:41.339+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T15:04:41.344+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T15:08:20.141+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T15:08:20.156+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T15:12:16.035+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T15:12:16.042+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T15:13:35.312+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T15:13:35.329+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T15:24:35.719+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T15:24:35.726+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T15:25:12.070+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T15:25:12.072+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T16:37:57.834+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T16:38:02.570+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T16:41:39.555+0800","caller":"mysql/post.go:35","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:41:39.556+0800","caller":"service/post.go:47","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:41:39.556+0800","caller":"controller/post.go:59","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"INFO","time":"2022-07-28T16:44:07.303+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T16:44:07.319+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T16:45:45.856+0800","caller":"mysql/post.go:35","msg":"query post failed","error":"scannable dest type ptr with >1 columns (6) in result"}
+{"level":"ERROR","time":"2022-07-28T16:45:45.858+0800","caller":"service/post.go:47","msg":"mysql.GetPostByID() failed","error":"scannable dest type ptr with >1 columns (6) in result"}
+{"level":"ERROR","time":"2022-07-28T16:45:45.859+0800","caller":"controller/post.go:59","msg":"service.GetPost(postID) failed","error":"scannable dest type ptr with >1 columns (6) in result"}
+{"level":"INFO","time":"2022-07-28T16:49:28.879+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T16:49:28.888+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T16:49:45.701+0800","caller":"mysql/post.go:37","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:49:45.776+0800","caller":"service/post.go:47","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:49:45.777+0800","caller":"controller/post.go:59","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:49:49.842+0800","caller":"mysql/post.go:37","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:49:49.842+0800","caller":"service/post.go:47","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:49:49.842+0800","caller":"controller/post.go:59","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"INFO","time":"2022-07-28T16:55:26.253+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T16:55:26.256+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T16:56:19.200+0800","caller":"mysql/post.go:37","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:56:19.202+0800","caller":"service/post.go:47","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:56:19.203+0800","caller":"controller/post.go:59","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:57:16.223+0800","caller":"mysql/post.go:37","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:57:16.223+0800","caller":"service/post.go:47","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T16:57:16.224+0800","caller":"controller/post.go:59","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"INFO","time":"2022-07-28T17:01:22.543+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:01:22.559+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T17:02:56.893+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:02:56.948+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T17:07:53.374+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:07:53.390+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T17:14:36.044+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:14:36.047+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T17:15:01.983+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:15:02.037+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T17:17:40.387+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:17:40.392+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T17:18:38.015+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:18:38.029+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T17:20:02.846+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T17:20:02.855+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T21:00:59.068+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T21:00:59.120+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T21:02:10.586+0800","caller":"mysql/post.go:37","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T21:02:10.587+0800","caller":"service/post.go:48","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T21:02:10.587+0800","caller":"controller/post.go:63","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"INFO","time":"2022-07-28T21:14:16.236+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T21:14:16.252+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T21:15:32.453+0800","caller":"mysql/post.go:37","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T21:15:32.454+0800","caller":"service/post.go:48","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T21:15:32.455+0800","caller":"controller/post.go:63","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"INFO","time":"2022-07-28T21:19:14.452+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T21:19:14.459+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T21:20:06.870+0800","caller":"mysql/post.go:37","msg":"query post failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T21:20:06.872+0800","caller":"service/post.go:48","msg":"mysql.GetPostByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T21:20:06.873+0800","caller":"controller/post.go:65","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"INFO","time":"2022-07-28T21:21:25.410+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T21:21:25.414+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-28T21:23:44.606+0800","caller":"service/post.go:53","msg":"mysql.GetUserByID() failed","error":"nil pointer passed to StructScan destination"}
+{"level":"ERROR","time":"2022-07-28T21:23:44.608+0800","caller":"controller/post.go:65","msg":"service.GetPost(postID) failed","error":"nil pointer passed to StructScan destination"}
+{"level":"INFO","time":"2022-07-28T21:30:20.056+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T21:30:20.070+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-28T22:41:08.213+0800","caller":"go_reddit/main.go:66","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-28T22:41:08.215+0800","caller":"go_reddit/main.go:75","msg":"Server exiting"}

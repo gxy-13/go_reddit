@@ -5,6 +5,7 @@ import (
 	"go_reddit/dao/mysql"
 	"go_reddit/models"
 	"go_reddit/service"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -35,6 +36,7 @@ func PostController(c *gin.Context) {
 		ResponseError(c, CodeServerBusy)
 		return
 	}
+	fmt.Printf("controller ====:%v\n", p)
 	ResponseSuccess(c, nil)
 }
 
@@ -46,14 +48,18 @@ func PostListController(c *gin.Context) {
 		ResponseError(c, CodeServerBusy)
 		return
 	}
+	for _, v := range posts {
+		fmt.Println(v.PostID)
+	}
 	ResponseSuccess(c, posts)
 }
 
 // PostDetailController 获取Post详细信息
 func PostDetailController(c *gin.Context) {
 	// 获取post id
-	postID := c.Param("id")
-
+	id := c.Param("id")
+	postID, err := strconv.ParseUint(id, 10, 64)
+	fmt.Printf("controller ------ id:%d\n", postID)
 	post, err := service.GetPost(postID)
 	if err != nil {
 		zap.L().Error("service.GetPost(postID) failed", zap.Error(err))
