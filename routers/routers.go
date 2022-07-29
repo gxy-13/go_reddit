@@ -18,16 +18,18 @@ func SetUp(mode string) *gin.Engine {
 	v1.POST("/signup", controller.SignUpController)
 	// 登录业务路由
 	v1.POST("/login", controller.SignInController)
-	v1.GET("/refresh_token", controller.RefreshTokenController)
+	//v1.GET("/refresh_token", controller.RefreshTokenController)
+
+	v1.GET("/community", controller.CommunityController)
+	v1.GET("/community/:id", controller.CommunityDetailController)
+	v1.POST("/posts", controller.PostController)
+	v1.GET("/posts2", controller.GetPostListController2)
+	v1.GET("/post/:id", controller.PostDetailController)
 
 	v1.Use(middlewares.JWTAuthMiddleware())
 	{
-		v1.GET("/community", controller.CommunityController)
 
 		v1.POST("/post", controller.PostController)
-
-		v1.GET("/posts2", controller.PostListController)
-		v1.GET("/post/:id", controller.PostDetailController)
 		v1.POST("/vote", controller.VoteController)
 	}
 

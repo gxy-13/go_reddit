@@ -12,8 +12,8 @@ import (
 const secret = "gxy"
 
 var (
-	ErrorUserExist     = errors.New("用户已存在")
-	ErrorUserNotExist  = errors.New("用户不存在")
+	//ErrorUserExist     = errors.New("用户已存在")
+	//ErrorUserNotExist  = errors.New("用户不存在")
 	ErrorWrongPassword = errors.New("密码错误")
 )
 
@@ -71,7 +71,7 @@ func CheckLogin(u *models.User) (err error) {
 	return
 }
 
-func GetUserByID(userID string) (u *models.User, err error) {
+func GetUserByID(userID uint64) (u *models.User, err error) {
 	u = new(models.User)
 	sqlStr := "select user_id, username from user where user_id = ?"
 	err = db.Get(u, sqlStr, userID)
